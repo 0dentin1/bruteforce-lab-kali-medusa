@@ -1,0 +1,9 @@
+# Logs gerados pelos scripts (podem conter credenciais encontradas)
+logs/*.txt
+
+# Cookies temporários
+/tmp/dvwa-cookies-*.txt
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db

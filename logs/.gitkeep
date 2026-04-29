@@ -1,0 +1,3 @@
+# Esta pasta armazena os logs gerados pelos scripts de teste.
+# Os arquivos de log não são versionados (.gitignore).
+# A pasta é mantida no repositório para referência de estrutura.

@@ -1,0 +1,10 @@
+ftp
+admin
+root
+user
+guest
+msfadmin
+anonymous
+backup
+service
+webadmin

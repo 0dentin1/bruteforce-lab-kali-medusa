@@ -1,0 +1,15 @@
+admin
+administrator
+root
+user
+test
+guest
+msfadmin
+postgres
+service
+ftp
+backup
+webadmin
+developer
+dev
+security
